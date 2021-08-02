@@ -72,18 +72,7 @@ def main():
 
                 else:
                     st.info("You are likely to be positive !! Please consult a doctor for medication")
-
-                
-            
-                
-                #import easygui
-                #easygui.msgbox(pred_values,ok_button="Close")
-                
-        
-        #import easygui
-
-        #easygui.msgbox(pred_values, title="simple gui")
-
+  
     #----------------------------------------------MOdelling page--------------------------------------
     elif choice=="Models":
         st.subheader("Modelling")
@@ -93,29 +82,7 @@ def main():
 
         #mutiple("pred_inputs.html")
         c1, c2=st.beta_columns(2)
-        # with c1:
-            
-
-        #     image=Image.open("/home/obed/Documents/ML/PROJECTS/diabetes/image.png")
-        #     st.image(image,use_column_width=True, caption="Image Source: https://images.app.goo.gl/A9X3ZYeCR5MjjoPS8")
-
-        #     logistic=Image.open("/home/obed/Documents/ML/PROJECTS/diabetes/detect.jpg")
-        #     st.image(logistic,use_column_width=True, caption="Logistic Regression")  
-
-        #     naivebayes=Image.open("/home/obed/Documents/ML/PROJECTS/diabetes/images/naivebayes.jpeg")
-        #     st.image(naivebayes,use_column_width=True, caption="Naive Bayes")
-
-        #     decision=Image.open("/home/obed/Documents/ML/PROJECTS/diabetes/images/decisiontree.jpeg")
-        #     st.image(decision,use_column_width=True, caption="Decision Tree")
-
-        # with c2:
-        #     randomforest=Image.open("/home/obed/Documents/ML/PROJECTS/diabetes/images/randomforest.jpeg")
-        #     st.image(randomforest,use_column_width=True, caption="Random Forest")
-        #     svm=Image.open("/home/obed/Documents/ML/PROJECTS/diabetes/images/svm.jpeg")
-        #     st.image(svm,use_column_width=True, caption="SVM")
-        #     knn=logistic=Image.open("/home/obed/Documents/ML/PROJECTS/diabetes/images/knn.png")
-        #     st.image(knn,use_column_width=True, caption="K-Nearest Neighbors")
-        
+       
         
     
     elif choice=="Report":
@@ -177,12 +144,6 @@ def main():
                 st.bar_chart(df['Age'])
                 st.area_chart(data=df)
 
-           
-                
-
-
-                #st.image("https://static.streamlit.io/examples/owl.jpg")
-
 
             
         elif viz=="Glucose":
@@ -223,14 +184,9 @@ def main():
         else:
             st.write(px.histogram(df,x="Pregnancies",color="Outcome"))
 
-            #with col1:
-                 #st.write( px.histogram(df, x="Pregnancies"))
-          
-                
-                #st.write(sns.scatterplot(data=df, x="Pregnancies", y="Outcome"))
-                #st.bar_chart(df['Outcome'])
+    
 
-        #--------------Correllation and pairplots
+        #--------------Correllation and pairplots---------------------------------------------------------
 
 
         st.markdown('<h3>General plotting</h3>',unsafe_allow_html=True)
@@ -251,35 +207,8 @@ def main():
             fig = sns.pairplot(df, hue="Outcome")
             st.pyplot(fig)
            
-            
-            
 
-	     
-	        
-            
-           
-           
-             
-            #charts=mc.make_charts())
-            #st.write(charts)
-        
-
-
-        
-        
-           
-
-            
-        # st.markdown('<h3>Select general visualization</h3>',unsafe_allow_html=True)
-        # genplt=st.selectbox("Select plot",["pairplot",'dist'])
-
-        # if genplt=="pairplot":
-        #     import seaborn as sns
-        #     with col1:
-        #         st.write(sns.pairplot(df,hue="Outcome"))
-
-
-# hiding the default hamburger from streamlit
+# ---------------------------------------hiding the default hamburger from streamlit
 
 hide_streamlit_style = """
             <style>
