@@ -208,7 +208,7 @@ def main():
             st.pyplot(fig)
            
 
-# ---------------------------------------hiding the default hamburger from streamlit
+# -----------------------------------hiding the default hamburger from streamlit
 
 hide_streamlit_style = """
             <style>
