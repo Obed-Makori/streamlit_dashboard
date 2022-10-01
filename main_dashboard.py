@@ -13,7 +13,7 @@ def mutiple(page_html,width=None,height=1500):
     components.html(page, width=width, height=height, scrolling=True)
 
 def main():
-    """"a simple description of what the app does"""
+    """"here, i have provided a simple description of what the app does"""
 
     menu=['Dashboard',"Models","Predict","Report"]
     #choice=st.sidebar.selectbox("Make A Selection",menu)
@@ -81,7 +81,7 @@ def main():
         # st.image(image)
 
         #mutiple("pred_inputs.html")
-        c1, c2=st.beta_columns(2)
+        c1, c2=st.columns(2)
        
         
     
@@ -109,7 +109,7 @@ def main():
         # app description
         st.markdown('<p style="font-weight: 600;color:#686e83"> An application that predicts if a person is infected with diabetes</p>',unsafe_allow_html=True)
         #uploading image
-        image=Image.open("/home/obed/Documents/ML/PROJECTS/diabetes/image.png")
+        image=Image.open("/home/obed/Documents/PROJECTS/streamlit_dashboard/image.png")
         st.image(image,use_column_width=True, caption="Image Source: https://images.app.goo.gl/A9X3ZYeCR5MjjoPS8")
 
         st.markdown('<h1>Data</h1>',unsafe_allow_html=True)
@@ -127,7 +127,7 @@ def main():
         st.markdown('<h3>Data visualization</h3>',unsafe_allow_html=True)
         viz=st.selectbox("Feature Distribution",df.columns)
 
-        col1,col2=st.beta_columns(2)
+        col1,col2=st.columns(2)
 
         if viz=="Age":
             with col1:
@@ -239,4 +239,5 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()  
+
 
