@@ -25,9 +25,9 @@ st.markdown("""
 #page navigation
 
 pages=[
+    st.Page("App_Pages/dashboard_v2.py", title='Dashboard', icon='🚨'),
     st.Page("App_Pages/aboutdataset.py", title='About Dataset', icon='ℹ️'),
     st.Page("App_Pages/EDA.py", title='EDA', icon='🔥'),
-    st.Page("App_Pages/dashboard_v2.py", title='Dashboard', icon='🚨'),
     st.Page("App_Pages/prediction.py", title='Prediction', icon=':material/thumb_up:'),
     st.Page("App_Pages/report.py", title='Report', icon=':material/thumb_up:')
 ]
