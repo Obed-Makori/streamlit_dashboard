@@ -37,7 +37,7 @@ with st.form("my_form"):
 
         # Load model and make prediction
         try:
-            model = joblib.load("my_model")
+            model = joblib.load("model")
             prediction = model.predict(pred_data)
 
             # Display result
